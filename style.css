@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 html {
   box-sizing: border-box;
   background: #ffc600;
-  font-family: 'helvetica neue';
+  font-family: 'Lobster';
   font-size: 20px;
   font-weight: 200;
 }
@@ -52,4 +54,8 @@ h1 {
 .slide-in.active {
   opacity: 1;
   transform: translateX(0%) scale(1);
+}
+
+.title {
+  text-align: center;
 }

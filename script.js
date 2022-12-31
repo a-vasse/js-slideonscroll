@@ -17,7 +17,23 @@ function limiter(func, wait = 20, immediate = true) {
 const sliderImages = document.querySelectorAll('.slide-in');
 
 function checkSlide(event) {
-  console.count(event)
+  sliderImages.forEach(sliderImage => {
+    // half way through the image
+    const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 3;
+
+    // bottom of the image
+    const imageBottom = sliderImage.offsetTop + sliderImage.height;
+
+    // doing the math
+    const isHalfShown = slideInAt > sliderImage.offsetTop;
+    const isNotScrolledPast = window.scrollY < imageBottom;
+
+    if (isHalfShown && isNotScrolledPast) {
+      sliderImage.classList.add('active');
+    } else {
+      sliderImage.classList.remove('active');
+    }
+  });
 }
 
 //limiter added to the standard event listener to limit it
