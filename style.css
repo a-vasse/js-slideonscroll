@@ -21,7 +21,7 @@ h1 {
 }
 
 .site-wrap {
-  max-width: 700px;
+  max-width: 830px;
   margin: 100px auto;
   background: white;
   padding: 40px;
@@ -30,12 +30,10 @@ h1 {
 
 .align-left {
   float: left;
-  margin-right: 20px;
 }
 
 .align-right {
   float: right;
-  margin-left: 20px;
 }
 
 .slide-in {
