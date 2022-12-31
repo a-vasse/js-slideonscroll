@@ -1,3 +1,15 @@
+import { places } from './data.js'
+
+const wrapper = document.querySelector('.cards');
+
+wrapper.innerHTML = places.map(function (place) {
+	return `<div class="card">
+    <h2 class="title">${place.name}</h2>
+    <img src="images/${place.name}1.jpg" class="align-left slide-in">
+    <img src="images/${place.name}2.jpg" class="align-right slide-in">
+    </div>`;
+}).join('');
+
 //Function that limits the amount of times the EventListener runs
 function limiter(func, wait = 20, immediate = true) {
   let timeout;
